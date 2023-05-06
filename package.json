@@ -1,0 +1,11 @@
+{
+  "name": "cutmp3",
+  "description": "A Node.js script that cuts a large MP3 file into smaller tracks using a provided timetable file with start/end times and song names.",
+  "scripts": {
+    "start": "node cutmp3"
+  },
+  "dependencies": {
+    "fluent-ffmpeg": "^2.1.2",
+    "moment": "^2.29.4"
+  }
+}
