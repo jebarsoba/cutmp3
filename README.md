@@ -12,15 +12,16 @@ npm install
 
 ### Usage
 1. Create a text file with a list of start/end times and song names for each track. The format of each line should be `START_TIME,END_TIME,SONG_NAME`, where `START_TIME` and `END_TIME` are in the format `HH:MM:SS`, and `SONG_NAME` is a string representing the name of the song (see "Sample timetable file" below).
-1. Open the cutmp3.js file and modify the following variables at the top of the file:
-    * `sourceAudioPath`: the path to the MP3 file you want to cut
-    * `timeTable`: the path to the text file with the list of start/end times and song names
-    * `targetDirPath`: the path to the directory where the output segments will be saved
-    * `targetSongNamesPrefix`: an optional prefix that will be appended to the output segments before the song name
-1. Run the script using the following command:
+2. Run the script using the following command:
 ```bash
-npm start
+node cutmp3.js /absolute/path/to/your/audiofile.mp3
 ```
+
+The script will automatically:
+* Use the provided absolute path to the MP3 file you want to cut.
+* Look for a timetable file named `timetable.txt` in the same directory as the source audio file.
+* Save the output segments in a `splitted-songs` directory within the same directory as the source audio file.
+* Use the filename (without the extension) as a prefix for the output segments before the song name.
 
 ### Sample timetable file
 ```
